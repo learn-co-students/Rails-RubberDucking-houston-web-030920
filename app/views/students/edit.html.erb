@@ -1,0 +1,9 @@
+<h1>Edit Student</h1>
+<form action="/students/<%= @student.id %>" method="POST">
+    <input type="hidden" name="_method" value="PATCH">
+    Name:
+    <input type="text" name="name" value="<%= @student.name %>">
+    Mod:
+    <input type="text" name="mod" value="<%= @student.mod %>">
+    <input type="submit">
+</form>
