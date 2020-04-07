@@ -1,0 +1,29 @@
+<form method="PATCH" action="/ducks/<%=@duck.id%>/update">
+<input id="hidden" type="hidden" name="_method" value="PATCH" /> 
+<h1>Edit a Duck</h1>
+<label>Name: </label><br>
+    <%= @duck.name %>
+    <input type="text" name="name">
+    <br><br>
+<label>Description: </label><br>
+    <%= @duck.description %>
+    <input type="text" name="description">
+    <br><br>
+<label>Student: </label><br>
+    <%= @duck.student.name %>
+      <select name="student_id">
+      <% Student.all.each do |student| %>
+        <option value="<%= student.id %>">
+        <%= student.name %>
+        </option>
+        <% end %>
+    </select>
+    <br><br>
+<label>Time Created: </label><br>
+    <%= @duck.created_at %>
+    <br><br>
+<label>Time Updated: </label><br>
+    <%= @duck.updated_at %>
+    <br>
+    <input type="submit">
+</form>
