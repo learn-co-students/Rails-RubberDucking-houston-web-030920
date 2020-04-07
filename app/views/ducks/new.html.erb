@@ -1,0 +1,23 @@
+<form method="POST" action="/ducks/create">
+<h1>Create a New Duck</h1>
+    <label>Name: </label><br>
+    <input type="text" name="name" required="true">
+    <br><br>
+<label>Description: </label><br>
+    <input type="text" name="description" required="true">
+    <br><br>
+<label>Student: </label><br>
+      <select name="student_id">
+      <% Student.all.each do |student| %>
+        <option value="<%= student.id %>">
+        <%= student.name %>
+        </option>
+        <% end %>
+    </select>
+    <br><br>
+<label>Time Created: </label><br>
+    <br><br>
+<label>Time Updated: </label><br>
+    <br>
+    <input type="submit">
+</form>
