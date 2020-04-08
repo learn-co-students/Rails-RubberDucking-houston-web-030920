@@ -1,0 +1,26 @@
+<form method="POST" action="/students/<%=@student.id%>">
+<input id="hidden" type="hidden" name="_method" value="PATCH">
+<div>
+    <label>Current Human:<label>
+    <%=@student.name%>
+</div>
+<div>
+    <label>Current Mod:<label>
+    <%=@student.mod%>
+</div>
+<div>
+<div>Human Name: <input type = "text" name = "name"></div>
+</div>
+<div> 
+        <label>What Mod Is The Human In?: <label>
+            <select name="mod">
+            <% mod_num = [1,2,3,4,5] %>
+            <% mod_num.each do | num | %>
+            <option value = "<%=num %>">
+                <%= num %>
+            </option>
+            <%  end %>
+            </select>
+    </div>
+<input type = 'submit' value = 'Update ze Student'/>
+</form>
