@@ -1,0 +1,17 @@
+<h1>Create a Human Being!</h1>
+
+<form method = POST action= /students>
+    <div>Human Name: <input type = "text" name = "name"></div>
+    <div> 
+        <label>What Mod Is The Human In?: <label>
+            <select name="mod">
+            <% mod_num = [1,2,3,4,5] %>
+            <% mod_num.each do | num | %>
+            <option value = "<%=num %>">
+                <%= num %>
+            </option>
+            <%  end %>
+            </select>
+    </div>
+    <div><input type = "submit" value = 'ARISE HUMAN!!!'></div>
+</form>

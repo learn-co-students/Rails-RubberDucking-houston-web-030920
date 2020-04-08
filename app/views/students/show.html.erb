@@ -1,0 +1,15 @@
+<h1><%= @student.name %></h1>
+<p>
+  <strong>Human:</strong>
+  <%= @student.name %>
+</p>
+ 
+<p>
+  <strong>Mod:</strong>
+  <%= @student.mod %>
+</p>
+
+<label>Duck Army:</label>
+<% @student.ducks.each do | duck | %>
+<li><%= link_to(duck.name, duck)%></li>
+<%end%>

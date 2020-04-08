@@ -1,0 +1,27 @@
+<form method="POST" action="/tenants/<%=@tenant.id%>">
+<input id="hidden" type="hidden" name="_method" value="PATCH">
+<div>
+    <label>Current Duck:<label>
+    <%=@tenant.name%>
+</div>
+<div>
+    <label>Current Desci:<label>
+    <%=@tenant.apartment.address%>
+</div>
+<div>
+    <label>Update Name<label>
+    <input name = "name" type = "text">   
+</div>
+<div>
+    <label>Update Address<label>
+    <select name="address">
+        <% @all_apartments.each do | apartment | %>
+        <option value = "<%=apartment.id %>">
+            <%= apartment.address %>
+        </option>
+        <%  end %>
+    <input type="submit">
+    </select>
+</div>
+</form>
+
