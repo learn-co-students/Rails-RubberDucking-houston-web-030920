@@ -1,0 +1,14 @@
+<h1>Edit Duck:</h1>
+<form method="POST" action="/ducks/<%=@duck.id%>">
+<input id="hidden" type="hidden" name="_method" value="PATCH">
+<p>Duck Name:<input type="text" name="name"></p>
+<p>Description:<input type="text" name="description"></P>
+<p>Student:<select name="student_id"></p>
+<%@students.each do |s|%>
+<option value= "<%=s.id%>">
+<%=s.id%>
+<%end%>
+</option>
+</select>
+<input type="submit">
+</form>

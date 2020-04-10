@@ -1,0 +1,15 @@
+<h1>Edit Student:</h1>
+<form method="POST" action="/students/<%=@student.id%>">
+<input id="hidden" type="hidden" name="_method" value="PATCH">
+<p>Name:<input type="text" name="name" required="true"></p>
+<div>
+Mod:<select name="mod">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+</div>
+<p><input type="submit" value="Edit Student"></p>
+</form>

@@ -1,0 +1,13 @@
+<h1>Create a new Duck!</h1>
+<form method="POST" action="/ducks">
+<p>Name:<input type="text" name="name"></p>
+<p>Description:<input type="text" name="description"></p>
+<p>Student name:<select name="student_id"></p>
+<%@students.each do |s|%>
+<option value="<%=s.id%>">
+<%=s.name%>
+</option>
+<%end%>
+</select>
+<input type="submit">
+</form>
