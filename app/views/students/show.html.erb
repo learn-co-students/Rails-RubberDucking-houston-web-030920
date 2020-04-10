@@ -1,0 +1,6 @@
+<h1>Name:<%= @student.name %></h1>
+<% @student.ducks.each do |duck|  %>
+<h3><%= duck.name %><h3><br>
+<% end %>
+
+<a class="button" href="/students/<%=@student.id%>/edit">Edit</a><br>
